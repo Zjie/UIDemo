@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UIDemo</string>
+    
+    <string name="action_settings">设置</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="title_activity_recommend">单机推荐</string>
+    <string name="title_activity_recommended_list">推荐列表</string>
+    <string name="title_activity_personal_key_word_analysis">个人关键词推荐</string>
+    
+    <string name="title">线索语言交互推荐</string>
+    <string name="analysis_button_text">通话交互推荐</string>
+    <string name="single_button_text">单机推荐</string>
+    <string name="recommended_list_button_text">推荐线索</string>
+    <string name="keyword_analysis_button_text">个人关键词分析</string>
+	
+    <!-- recommended_list -->
+    <string name="reference_clue">相关线索</string>
+</resources>

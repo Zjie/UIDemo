@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.baidu.demo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!-- receiver android:name="com.baidu.demo.audioService.PhoneReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver -->
+        <!-- 主页面 -->
+        <activity
+            android:name="com.baidu.demo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 单机推荐页面-->
+        <activity
+            android:name="com.baidu.demo.Recommend"
+            android:label="@string/title_activity_recommend" >
+            <intent-filter>
+                <action android:name="com.baidu.demo.Recommend" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 推荐列表页面-->
+        <activity
+            android:name="com.baidu.demo.RecommendedList"
+            android:label="@string/title_activity_recommended_list" >
+            <intent-filter>
+                <action android:name="com.baidu.demo.RecommendedList" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 个人关键词页面页面-->
+        <activity
+            android:name="com.baidu.demo.PersonalKeyWordAnalysis"
+            android:label="@string/title_activity_personal_key_word_analysis" >
+            <intent-filter>
+                <action android:name="com.baidu.demo.PersonalKeyWordAnalysis" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.baidu.demo.provider.ClueProvider" android:name=".provider.ClueProvider"></provider>
+        <provider android:authorities="com.baidu.demo.provider.ClueGroupProvider" android:name=".provider.ClueGroupProvider"></provider>
+    </application>
+
+</manifest>
